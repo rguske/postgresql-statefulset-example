@@ -11,7 +11,7 @@ export NAMESPACE='postgresql'
 ```
 
 ```bash
-kubectl -n ${NAMESPACE} apply -k .
+kubectl -n ${NAMESPACE} apply -k base/kustomization.yaml
 ```
 
 MetalLB is required only when the optional LoadBalancer Service shown below is used.

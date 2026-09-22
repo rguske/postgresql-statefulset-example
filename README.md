@@ -6,8 +6,12 @@ The PVCs use the `synology-iscsi` `StorageClass` by default. Adjust the `Storage
 
 Deploy the complete example with:
 
+```shell
+export NAMESPACE='postgresql'
+```
+
 ```bash
-kubectl apply -k .
+kubectl -n ${NAMESPACE} apply -k .
 ```
 
 MetalLB is required only when the optional LoadBalancer Service shown below is used.

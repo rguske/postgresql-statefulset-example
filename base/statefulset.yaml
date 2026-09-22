@@ -18,8 +18,6 @@ spec:
     spec:
       serviceAccountName: postgres
       securityContext:
-        runAsUser: 999
-        runAsGroup: 999
         fsGroup: 999
         fsGroupChangePolicy: Always
       terminationGracePeriodSeconds: 30
@@ -56,6 +54,8 @@ spec:
             capabilities:
               drop:
                 - ALL
+            seccompProfile:
+              type: RuntimeDefault
       volumes:
         - name: pgdata
           persistentVolumeClaim:

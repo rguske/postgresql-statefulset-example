@@ -14,9 +14,6 @@ spec:
       labels:
         app: postgres
     spec:
-      securityContext:
-        fsGroup: 999
-        fsGroupChangePolicy: Always
       terminationGracePeriodSeconds: 30
       containers:
         - name: postgres
@@ -46,6 +43,7 @@ spec:
             - name: pglogs
               mountPath: /mnt/postgresql-16/pglogs
           securityContext:
+            fsGroup: 999
             runAsNonRoot: true
             allowPrivilegeEscalation: false
             capabilities:

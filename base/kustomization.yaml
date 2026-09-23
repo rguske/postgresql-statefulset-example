@@ -6,4 +6,4 @@ resources:
   - statefulset.yaml
   - service.yaml
   - secret.yaml
-  - serviceaccount.yaml
+#  - serviceaccount.yaml

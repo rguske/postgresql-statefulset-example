@@ -13,10 +13,7 @@ spec:
     metadata:
       labels:
         app: postgres
-      annotations:
-        openshift.io/required-scc: anyuid
     spec:
-      serviceAccountName: postgres
       securityContext:
         fsGroup: 999
         fsGroupChangePolicy: Always

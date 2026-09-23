@@ -12,14 +12,14 @@ spec:
       targetPort: 5432
   type: ClusterIP
   selector:
-    name: postgres
+    app: postgres
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: postgres-nodeport
   labels:
-    zone: lab
+    app: postgres
 spec:
   selector:
     app: postgres
